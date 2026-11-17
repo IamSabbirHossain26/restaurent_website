@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { site } from "@/config/site";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
+import { AutoTranslate } from "./AutoTranslate";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const navLinks = [
@@ -74,8 +75,9 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2.5 lg:flex">
           <LanguageSwitcher />
+          <AutoTranslate />
           <a
             href={site.contact.phoneHref}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-charcoal/80 hover:text-charcoal"
@@ -93,6 +95,7 @@ export function Header() {
 
         <div className="flex items-center gap-2 lg:hidden">
           <LanguageSwitcher />
+          <AutoTranslate />
           <button
             type="button"
             onClick={() => setOpenForPath(open ? null : pathname)}

@@ -89,3 +89,31 @@ html[lang="bn"] .font-display {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Keep Google Translate widget clean and hide its top banner */
+body {
+  top: 0 !important;
+}
+
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+.skiptranslate > iframe {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  font-family: var(--font-sans) !important;
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+  color: var(--charcoal);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
