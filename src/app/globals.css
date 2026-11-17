@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/inter";
+@import "@fontsource/noto-serif-bengali/400.css";
+@import "@fontsource/noto-serif-bengali/600.css";
+@import "@fontsource/noto-serif-bengali/700.css";
+@import "@fontsource/hind-siliguri/400.css";
+@import "@fontsource/hind-siliguri/500.css";
+@import "@fontsource/hind-siliguri/600.css";
+@import "@fontsource/hind-siliguri/700.css";
+
+:root {
+  --bg: #f7f4ee;
+  --surface: #fbf9f5;
+  --surface-alt: #ede7db;
+  --charcoal: #1c1d1a;
+  --charcoal-soft: #2a2c26;
+  --olive: #4a563e;
+  --olive-dark: #37412e;
+  --brass: #b89352;
+  --brass-soft: #e6d8b9;
+  --wine: #6e352c;
+  --muted: #5c5b55;
+  --border: #ddd6c8;
+  --border-strong: #c5bca9;
+}
+
+@theme inline {
+  --color-linen: var(--bg);
+  --color-cream: var(--surface);
+  --color-sand: var(--surface-alt);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-soft: var(--charcoal-soft);
+  --color-olive: var(--olive);
+  --color-olive-dark: var(--olive-dark);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-wine: var(--wine);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --font-display: "Fraunces Variable", "Noto Serif Bengali", Georgia, serif;
+  --font-sans: "Inter Variable", "Hind Siliguri", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[lang="bn"] body {
+  line-height: 1.7;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+html[lang="bn"] h1,
+html[lang="bn"] h2,
+html[lang="bn"] h3,
+html[lang="bn"] .font-display {
+  letter-spacing: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
